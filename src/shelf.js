@@ -1,7 +1,9 @@
-
+function shelfBook(book, shelf){
+  shelf.push(book)
+}
 
 module.exports = {
-  // shelfBook: shelfBook,
+  shelfBook: shelfBook,
   // unshelfBook: unshelfBook,
   // listTitles: listTitles,
   // searchShelf: searchShelf
