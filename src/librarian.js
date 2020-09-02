@@ -12,6 +12,19 @@ class Librarian {
     } else{
       return `Hello, ${person}!`}
   }
+  findBook( title ){
+    for(const [key, value] of Object.entries(this.library.shelves)){
+      if(searchShelf(value, title)){
+        checkoutBook( this.library, title)
+        return `Yes, we have ${title}`
+      } else {
+        return `Sorry, we do not have ${title}`
+      }
+    }
+  }
+  calculateLateFee(days){
+    return Math.ceil((days * .25))
+  }
 }
 
 module.exports = Librarian;
