@@ -4,8 +4,8 @@ function shelfBook(book, shelf){
   }
 }
 
-function unshelfBook(book, shelf){
-  var index = shelf.map(shelf=> shelf.title).indexOf(book)
+function unshelfBook(title, shelf){
+  var index = shelf.map(shelf=> shelf.title).indexOf(title)
   shelf.splice(index, 1)
 }
 
